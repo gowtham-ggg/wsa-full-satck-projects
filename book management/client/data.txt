@@ -1,0 +1,11 @@
+ const books = [{
+        id:1, title : 'Horror', author : 'harry', year : 1978
+    },
+    {
+        id:2, title : 'comedy', author : 'janny', year : 1968
+    },
+    {
+        id:3, title : 'Thriller', author : 'Rock', year : 2017
+    }
+
+]
