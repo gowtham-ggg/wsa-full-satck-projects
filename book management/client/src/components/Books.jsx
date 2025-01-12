@@ -52,7 +52,7 @@ const Books = () => {
           )
         );
         setForm({ title: "", author: "", year: "" });
-        setEditId(null); // Reset edit state
+        setEditId(null); 
         toast.success("Updated successfully...");
       })
       .catch((error) => {
@@ -64,7 +64,7 @@ const Books = () => {
     axios
       .delete(`${url}/${id}`)
       .then(() => {
-        setBooks(books.filter((book) => book._id !== id)); // Use _id here
+        setBooks(books.filter((book) => book._id !== id)); 
         toast.success("Deleted successfully...");
       })
       .catch((error) => {
@@ -74,7 +74,7 @@ const Books = () => {
 
   const handleEdit = (book) => {
     setForm({ title: book.title, author: book.author, year: book.year });
-    setEditId(book._id); // Use _id here
+    setEditId(book._id); 
   };
 
   const handleChange = (e) => {
@@ -162,4 +162,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default Books;   
