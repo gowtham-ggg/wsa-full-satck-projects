@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind classes for the Card container */
+.card-container {
+  @apply bg-white rounded-xl shadow-xl p-6 space-y-4 flex flex-col justify-between hover:shadow-2xl transform transition-all duration-300 ease-in-out;
+}
+
+.card-container:hover {
+  @apply scale-105;
+}
+
+/* Movie title styling */
+.card-title {
+  @apply text-2xl font-semibold text-gray-800 tracking-tight hover:text-blue-600 transition-colors duration-300;
+}
+
+/* Cast styling */
+.card-cast {
+  @apply text-gray-600 text-sm italic;
+}
+
+/* Release date styling */
+.card-date {
+  @apply text-gray-500 text-sm;
+}
+
+/* Genre styling */
+.card-genre {
+  @apply text-gray-700 font-medium;
+}
+
+/* Countdown styling */
+.card-countdown {
+  @apply text-lg font-semibold text-green-500 mt-2;
+}
+
+/* Whitelist button styling */
+button.favorite-btn {
+  @apply px-4 py-2 text-sm font-medium border border-gray-300 rounded-lg text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-2 focus:ring-blue-400 transition duration-200 ease-in-out;
+}
+
+button.favorite-btn:hover {
+  @apply text-red-500 bg-red-100;
+}
+
+/* Available Now button styling */
+button.avail-btn {
+  @apply px-6 py-2 text-sm font-medium text-white bg-green-500 rounded-lg shadow-md hover:bg-green-600 focus:ring-2 focus:ring-green-400 transition-all duration-300 ease-in-out;
+}
+
+button.avail-btn:hover {
+  @apply scale-105;
+}
+
+/* Grid layout for the cards */
+.card-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Add some spacing between the cards */
+.card-grid .card-container {
+  @apply mb-6;
+}
+
+/* Add a nice effect when hovering over the entire card */
+.card-grid .card-container:hover {
+  @apply transform transition-all duration-300 ease-in-out shadow-2xl;
+}
+
+/* Button container to manage layout */
+.button-container {
+  @apply flex justify-between items-center mt-4;
+}
+
+/* Countdown timer styles */
+.card-countdown {
+  @apply text-lg font-semibold text-green-500 mt-2;
+}
+
+/* Mobile responsiveness - adjust for smaller screens */
+@media screen and (max-width: 639px) {
+  .card-title {
+    @apply text-xl;
+  }
+  
+  .card-cast,
+  .card-genre {
+    @apply text-sm;
+  }
+}
