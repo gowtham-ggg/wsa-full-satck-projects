@@ -39,7 +39,7 @@ const Card = ({ data }) => {
       [index]: !prev[index],
     }));
   };
-
+//fetch automatically
   useEffect(() => {
     data.forEach((item, index) => {
       updateCountdown(index, item.date);
